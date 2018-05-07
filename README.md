@@ -181,11 +181,16 @@ mipmap-xhdpi/
 </rotate>
 ```
 
-# 第二章 技术点记录
 
-# 1.
 
-# 2.
+修改完成后再资源目录下的drawable目录下的文件如下:
 
-# 3.
+```bash
+ └── res
+    ├── drawable
+    │   ├── common_progress_cirle.xml
+    │   ├── header_yun_anim.xml
+    │   ├── ic_launcher_background.xml
+    │   └── yun_anim.xml
+```
 
