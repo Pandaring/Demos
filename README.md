@@ -193,4 +193,13 @@ mipmap-xhdpi/
     │   ├── ic_launcher_background.xml
     │   └── yun_anim.xml
 ```
+## 3. 启用数据绑定
 
+在app下的`build.gradle`里添加:
+```
+android {
+    dataBinding {
+        enabled = true
+    }
+}
+```
