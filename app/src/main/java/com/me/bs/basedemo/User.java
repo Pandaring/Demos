@@ -1,0 +1,31 @@
+package com.me.bs.basedemo;
+
+/**
+ * 作者: Panda8
+ * 日期: 2018/5/7 16:32.
+ */
+public class User {
+    private String firstName;
+    private String lastName;
+
+    public User(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+}

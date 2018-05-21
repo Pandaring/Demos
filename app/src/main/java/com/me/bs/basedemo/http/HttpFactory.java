@@ -3,14 +3,13 @@ package com.me.bs.basedemo.http;
 import static com.me.bs.basedemo.http.HttpUtils.*;
 
 /**
- * @author jingbin
- * @data 2018/2/9
- * @Description
+ * 作者: Panda8
+ * 日期: 2018/5/8 09:52.
  */
 
-public class BuildFactory {
+public class HttpFactory {
 
-    private static BuildFactory instance;
+    private static HttpFactory instance;
     private Object gankHttps;
     private Object doubanHttps;
     private Object dongtingHttps;
@@ -19,11 +18,11 @@ public class BuildFactory {
     private Object nhdzHttps;
     private Object qsbkHttps;
 
-    public static BuildFactory getInstance() {
+    public static HttpFactory getInstance() {
         if (instance == null) {
-            synchronized (BuildFactory.class) {
+            synchronized (HttpFactory.class) {
                 if (instance == null) {
-                    instance = new BuildFactory();
+                    instance = new HttpFactory();
                 }
             }
         }
@@ -35,7 +34,7 @@ public class BuildFactory {
         switch (type) {
             case API_GANKIO:
                 if (gankHttps == null) {
-                    synchronized (BuildFactory.class) {
+                    synchronized (HttpFactory.class) {
                         if (gankHttps == null) {
                             gankHttps = HttpUtils.getInstance().getBuilder(type).build().create(a);
                         }
@@ -44,7 +43,7 @@ public class BuildFactory {
                 return (T) gankHttps;
             case API_DOUBAN:
                 if (doubanHttps == null) {
-                    synchronized (BuildFactory.class) {
+                    synchronized (HttpFactory.class) {
                         if (doubanHttps == null) {
                             doubanHttps = HttpUtils.getInstance().getBuilder(type).build().create(a);
                         }
@@ -53,7 +52,7 @@ public class BuildFactory {
                 return (T) doubanHttps;
             case API_TING:
                 if (dongtingHttps == null) {
-                    synchronized (BuildFactory.class) {
+                    synchronized (HttpFactory.class) {
                         if (dongtingHttps == null) {
                             dongtingHttps = HttpUtils.getInstance().getBuilder(type).build().create(a);
                         }
@@ -62,7 +61,7 @@ public class BuildFactory {
                 return (T) dongtingHttps;
             case API_FIR:
                 if (firHttps == null) {
-                    synchronized (BuildFactory.class) {
+                    synchronized (HttpFactory.class) {
                         if (firHttps == null) {
                             firHttps = HttpUtils.getInstance().getBuilder(type).build().create(a);
                         }
@@ -71,7 +70,7 @@ public class BuildFactory {
                 return (T) firHttps;
             case API_WAN_ANDROID:
                 if (wanAndroidHttps == null) {
-                    synchronized (BuildFactory.class) {
+                    synchronized (HttpFactory.class) {
                         if (wanAndroidHttps == null) {
                             wanAndroidHttps = HttpUtils.getInstance().getBuilder(type).build().create(a);
                         }
@@ -80,7 +79,7 @@ public class BuildFactory {
                 return (T) wanAndroidHttps;
             case API_NHDZ:
                 if (nhdzHttps == null) {
-                    synchronized (BuildFactory.class) {
+                    synchronized (HttpFactory.class) {
                         if (nhdzHttps == null) {
                             nhdzHttps = HttpUtils.getInstance().getBuilder(type).build().create(a);
                         }
@@ -89,7 +88,7 @@ public class BuildFactory {
                 return (T) nhdzHttps;
             case API_QSBK:
                 if (qsbkHttps == null) {
-                    synchronized (BuildFactory.class) {
+                    synchronized (HttpFactory.class) {
                         if (qsbkHttps == null) {
                             qsbkHttps = HttpUtils.getInstance().getBuilder(type).build().create(a);
                         }
@@ -98,7 +97,7 @@ public class BuildFactory {
                 return (T) qsbkHttps;
             default:
                 if (gankHttps == null) {
-                    synchronized (BuildFactory.class) {
+                    synchronized (HttpFactory.class) {
                         if (gankHttps == null) {
                             gankHttps = HttpUtils.getInstance().getBuilder(type).build().create(a);
                         }
